@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Tables</title>
+    <link rel="stylesheet" href="tables.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-cloud-sun"></i>
+                Weather App
+            </div>
+            <nav>
+                <a href="index.html">
+                    <i class="fas fa-home"></i> Dashboard
+                </a>
+                <a href="tables.html" class="active">
+                    <i class="fas fa-table"></i> Tables
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content Section -->
+        <main class="main-content">
+            <!-- Top Bar with Search and User Profile -->
+            <header class="top-bar">
+                <div class="search-container">
+                    <input type="text" id="cityInput" placeholder="Enter city name">
+                    <button id="searchBtn">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+                <div class="user-profile">
+                    <div class="profile-icon">
+                        MH
+                    </div>
+                    <span id="userNameDisplay">Mahnoor Hafeez</span>
+                </div>
+            </header>
+
+            <!-- Content Wrapper -->
+            <div class="content-wrapper">
+                <!-- Table Section for Weather Data -->
+                <section class="table-section">
+                    <div class="temperature-toggle">
+                        <label for="unitToggle">Temperature Unit:</label>
+                        <select id="unitToggle">
+                            <option value="celsius">Celsius</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Filter Buttons -->
+                    <div class="filters">
+                        <button id="sortAscBtn" class="filter-btn">
+                            <i class="fas fa-sort-amount-up"></i> Sort Ascending
+                        </button>
+                        <button id="sortDescBtn" class="filter-btn">
+                            <i class="fas fa-sort-amount-down"></i> Sort Descending
+                        </button>
+                        <button id="filterRainBtn" class="filter-btn">
+                            <i class="fas fa-cloud-rain"></i> Rainy Days
+                        </button>
+                        <button id="highestTempBtn" class="filter-btn">
+                            <i class="fas fa-temperature-high"></i> Highest Temp
+                        </button>
+                        <button id="resetFiltersBtn" class="filter-btn">
+                            <i class="fas fa-undo"></i> Reset
+                        </button>
+                    </div>
+
+                    <!-- Loader -->
+                    <div id="loader" class="loader" style="display: none;"></div>
+
+                    <!-- Weather Forecast Table -->
+                    <div class="table-container">
+                        <table id="forecastTable">
+                            <thead>
+                                <tr>
+                                    <th>Date & Time</th>
+                                    <th>Temperature</th>
+                                    <th>Weather Condition</th>
+                                    <th>Icon</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div id="pagination" class="pagination"></div>
+                </section>
+
+                <!-- Chatbot Section -->
+                <aside class="chatbot-section">
+                    <div class="chatbot-container">
+                        <div id="chatHeader">
+                            <i class="fas fa-robot"></i> Weather Assistant
+                        </div>
+                        <div id="chatMessages"></div>
+                        <div class="chat-input-area">
+                            <input type="text" id="chatInput" placeholder="Ask about weather...">
+                            <button id="sendChatBtn">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </main>
+    </div>
+
+    <script src="tables.js"></script>
+</body>
+</html> 

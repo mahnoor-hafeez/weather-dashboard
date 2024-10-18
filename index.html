@@ -1,0 +1,86 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-cloud-sun"></i>
+                Weather App
+            </div>
+            <nav>
+                <a href="index.html" class="active">
+                    <i class="fas fa-home"></i> Dashboard
+                </a>
+                <a href="tables.html">
+                    <i class="fas fa-table"></i> Tables
+                </a>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-container">
+                    <input type="text" id="cityInput" placeholder="Enter city name">
+                    <button id="searchBtn">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                    <button id="locationBtn" title="Use current location">
+                        <i class="fas fa-location-dot"></i>
+                    </button>
+                </div>
+                <div class="user-profile">
+                    <div class="profile-icon">
+                        MH
+                    </div>
+                    <span id="userNameDisplay">Mahnoor Hafeez</span>
+                </div>
+                
+            </header>
+
+            <div id="loader" class="loader hidden">
+                <div class="spinner"></div>
+            </div>
+
+            <!-- Current Weather Widget -->
+            <section class="weather-widget" id="weatherWidget">
+                <div class="current-weather">
+                    <h2 id="cityName"></h2>
+                    <div id="currentWeather" class="weather-details"></div>
+                </div>
+            </section>
+
+            <!-- 5-Day Forecast -->
+            <section class="forecast-section">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-container" id="forecastContainer"></div>
+            </section>
+
+            <!-- Charts Section -->
+            <section class="charts">
+                <div class="chart-container">
+                    <canvas id="tempBarChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="conditionDoughnutChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="tempLineChart"></canvas>
+                </div>
+            </section>
+        </main>
+
+
+    <script src="dscript.js"></script>
+</body>
+</html>
+
+

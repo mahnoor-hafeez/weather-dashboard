@@ -1,5 +1,5 @@
 # Weather Dashboard with Chatbot Integration
-THIS IS MY MODIFICATION.
+Iam overwriting the content of main in branch 1. 
 ## Project Overview
 
 The **Weather Dashboard with Chatbot Integration** is a web application that allows users to retrieve weather forecasts for various cities. It integrates with the OpenWeather API to fetch current weather data and a chatbot powered by the Gemini API to provide an interactive conversational experience. Users can view weather conditions, toggle between temperature units, filter results, and chat with the bot for additional information.

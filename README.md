@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 Change in file by main.
+=======
+Changes in file by Branch1.
+>>>>>>> branch1
 # Weather Dashboard with Chatbot Integration
 
 ## Project Overview
